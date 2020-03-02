@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//商品
+Route::prefix('goods')->group(function(){
+	Route::get('/create','GoodsController@create');
+	Route::post('/store','GoodsController@store');
+	Route::post('/checkOnly','GoodsController@checkOnly');
+	Route::get('/','GoodsController@index');
+	Route::get('/destroy/{id}','GoodsController@destroy');
+	Route::get('/edit/{id}','GoodsController@edit');
+	Route::post('/update/{id}','GoodsController@update');
+});

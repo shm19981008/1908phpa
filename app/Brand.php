@@ -11,7 +11,7 @@ class Brand extends Model
     public $timestamps=false;
     protected $guarded=[];
 
-    protected $primaryKey = 'b_id';
-    public $timestamps = false;
+    
+    
 
 }

@@ -15,12 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/brand/create','BrandController@create');
 Route::post('/brand/store','BrandController@store');
 Route::get('/brand','BrandController@index');
 Route::get('/brand/edit/{id}','BrandController@edit');
 Route::post('/brand/update/{id}','BrandController@update');
 Route::get('/brand/destroy/{id}','BrandController@destroy');
+
 //商品
 Route::prefix('goods')->group(function(){
 	Route::get('/create','GoodsController@create');
@@ -31,4 +33,16 @@ Route::prefix('goods')->group(function(){
 	Route::get('/edit/{id}','GoodsController@edit');
 	Route::post('/update/{id}','GoodsController@update');
 });
+
+
+
+
+//管理员
+Route::get('admin/create','AdminController@create');
+Route::post('admin/store','AdminController@store');
+Route::get('/admin','AdminController@index');
+Route::get('admin/destroy/{id}','AdminController@destroy');
+Route::get('admin/edit/{id}','AdminController@edit');
+Route::post('admin/update/{id}','AdminController@update');
+
 

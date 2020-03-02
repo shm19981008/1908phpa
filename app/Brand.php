@@ -10,4 +10,8 @@ class Brand extends Model
     protected $primaryKey='b_id';
     public $timestamps=false;
     protected $guarded=[];
+
+    protected $primaryKey = 'b_id';
+    public $timestamps = false;
+
 }

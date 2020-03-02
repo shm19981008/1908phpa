@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//管理员
+Route::get('admin/create','AdminController@create');
+Route::post('admin/store','AdminController@store');
+Route::get('/admin','AdminController@index');
+Route::get('admin/destroy/{id}','AdminController@destroy');
+Route::get('admin/edit/{id}','AdminController@edit');
+Route::post('admin/update/{id}','AdminController@update');
